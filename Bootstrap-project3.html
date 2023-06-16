@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.">
+    <link rel="stylesheet" href="line-awesome.fig">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <style>
+        img {
+            width: 100%;
+        }
+
+        @media (min-width:992px) {
+            .navbar {
+                min-height: 100vh;
+                min-width: 30vh;
+                width: 100px;
+                background-image: linear-gradient(rgba(3, 63, 71, 0.9), rgba(3, 63, 71, 0.9)), url(https://ipt.imgix.net/202004/x/0/lofoten-216.jpg);
+                background-size: cover;
+                background-position: center;
+
+
+
+            }
+
+            .navbar-brand img {
+                border: 8px solid yellow;
+            }
+
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: darkcyan;
+
+        }
+
+        .full-hight {
+            min-height: 100vh;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .shadow-effect {
+
+            transition: all 0.5s;
+        }
+
+        .shadow-effect:hover {
+            box-shadow: -6px 6px 0 0 yellow;
+
+        }
+
+        <--navabar-->.navbar .nav-link {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .navbar .nav-link:hover {
+            color: lightyellow;
+        }
+
+        .navbar {
+            background-color: darkcyan;
+        }
+
+
+        #navbar1 .nav-link.active {
+            color: yellow;
+        }
+
+
+        #content-wraper {
+            padding-left: 240px;
+
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+
+        .btn {
+            padding: 12px 12px;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        .btn-brand {
+            background-color: yellow;
+
+
+        }
+
+        .btn-brand:hover,
+        .btn-brand:focus {
+
+            background-color: darkslategray;
+            border-color: black;
+        }
+
+        .link-custam {
+        font-weight: 700;
+        position: relative;
+        color: white;
+        }
+
+        .link-custam:hover {
+        color: yellow;
+        }
+
+        .link-custam::after {
+        content: "";
+        height: 2px;
+        width: 0%;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        background: yellow;
+        transition: all 0.4s;
+        }
+
+        .link-custam:hover::after {
+        width: 100%;
+        }
+        .inbox {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            background-color: yellow;
+        }
+
+
+        .card-custam .card-custam-img {
+            overflow: hidden;
+        }
+
+        .card-custam .card-custam-img img {
+            transition: all 0.5s ease;
+
+        }
+
+        .card-custam:hover .card-custam-img img {
+            transform: scale(1.1);
+            box-shadow: -6px 6px 0 0 red;
+
+
+        }
+
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar1" data-bs-offset="50">
+
+
+    <nav id="navbar1" class="navbar navbar-dark navbar-expand-sm  p-3 fixed-top">
+        <div class="container flex-lg-column">
+            <a href="#" class="navbar-brand mb-lg-4 mx-lg-auto "><span class="fw-bold h3 d-block d-lg-none">Yaver Gazi</span>
+                <img class="rounded-circle d-lg-block d-none" src="https://i0.wp.com/www.maxcolorpro.com/wp-content/uploads/2016/01/man_profile_shot.jpg" alt="">
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#best">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="best">
+                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link ">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link">service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#work" class="nav-link">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reviews" class="nav-link">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div id="content-wraper" class="text-white">
+        <section id="home" class="full-hight px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold " data-aos="fade-up">I'm Web Developer from Bielefeld,Germany</h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">I am Yaver Gazi and i craft high-performing and delightful experiences tailored and conversion foucsed</p>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <a href="#work" class="btn btn-brand  "> Expore my work</a>
+                            <a href="#" class="link-custam">coll:(171)8263545</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+        <section id="service" class="full-hight px-lg-5 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">service</h6>
+                        <h1 class=" text-white ">
+                            Service that I provide </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4  " data-aos="fade-up">
+                        <div class="sercive bg-dark p-4 rounded-3  shadow-effect">
+                            <div class="inbox rounded-3">
+                                <i class="fa-solid fa-feather"></i>
+
+                            </div>
+                            <h4 class="mt-4 mb-4">UX Disign</h4>
+                            <p>i am craft high-performing and delightful experiences tailored and conversion foucsed</p>
+                            <a href="#" class="link-custam">Read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4  " data-aos="fade-up" data-aos-delay="300">
+                        <div class="sercive bg-dark p-4 rounded-3  shadow-effect">
+                            <div class="inbox rounded-3">
+                                <i class="fa-solid fa-pen-ruler"></i>
+
+                            </div>
+                            <h4 class="mt-4 mb-4">Branding</h4>
+                            <p>i am craft high-performing and delightful experiences tailored and conversion foucsed</p>
+                            <a href="#" class="link-custam">Read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4  " data-aos="fade-up" data-aos-delay="600">
+                        <div class="sercive bg-dark p-4 rounded-3  shadow-effect">
+                            <div class="inbox rounded-3">
+                                <i class="fa-solid fa-laptop-code"></i>
+
+                            </div>
+                            <h4 class="mt-4 mb-4">Web Design</h4>
+                            <p>i am craft high-performing and delightful experiences tailored and conversion foucsed</p>
+                            <a href="#" class="link-custam">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="work" class="full-hight px-lg-5">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">work</h6>
+                        <h1 class=" text-white ">
+                            Service that I provide </h1>
+                    </div>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-lg-6">
+                        <div class="card-custam rounded-3 bg-info shadow-effect mb-2" data-aos="fade-up">
+                            <div class="card-custam-img rounded-3 "><img class=" img-fluid d-block rounded-3 " src="https://www.slideteam.net/media/catalog/product/cache/543x403/i/n/inbound_content_marketing_quarterly_roadmap_with_milestones_slide01.jpg" alt="">
+                            </div>
+                            <div class="card-custam-content">
+                                <h4>Startup landing page</h4>
+                                <p class="">Lorem ipsum dolor sit am.</p>
+                                <a href="#" class="link-custam">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-custam rounded-3 bg-info shadow-effect mb-2" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card-custam-img rounded-3 "><img class=" img-fluid d-block rounded-3 " src="https://www.slideteam.net/media/catalog/product/cache/543x403/i/n/inbound_content_marketing_quarterly_roadmap_with_milestones_slide01.jpg" alt="">
+                            </div>
+                            <div class="card-custam-content">
+                                <h4>Startup landing page</h4>
+                                <p class="">Lorem ipsum dolor sit am.</p>
+                                <a href="#" class="link-custam">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-custam rounded-3 bg-info shadow-effect mb-2" data-aos="fade-up" data-aos-delay="400">
+                            <div class="card-custam-img rounded-3 "><img class=" img-fluid d-block rounded-3 " src="https://www.slideteam.net/media/catalog/product/cache/543x403/i/n/inbound_content_marketing_quarterly_roadmap_with_milestones_slide01.jpg" alt="">
+                            </div>
+                            <div class="card-custam-content">
+                                <h4>Startup landing page</h4>
+                                <p class="">Lorem ipsum dolor sit am.</p>
+                                <a href="#" class="link-custam">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-custam rounded-3 bg-info shadow-effect mb-2" data-aos="fade-up" data-aos-delay="500">
+                            <div class="card-custam-img rounded-3 "><img class="rounded-3 " src="https://www.slideteam.net/media/catalog/product/cache/543x403/i/n/inbound_content_marketing_quarterly_roadmap_with_milestones_slide01.jpg" alt="">
+                            </div>
+                            <div class="card-custam-content">
+                                <h4>Startup landing page</h4>
+                                <p class="">Lorem ipsum dolor sit am.</p>
+                                <a href="#" class="link-custam">read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="about" class="full-hight px-lg-5">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                        <h6>about</h6>
+                        <h2>My Education & Experiance</h2>
+                    </div>
+                </div>
+                <div class="row gy-5">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                        <h3>education</h3>
+                        <div class="row gy-4">
+
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="rounded-3 bg-dark shadow-effect p-4">
+                                    <h4>
+                                        course in Ironhuck Bootcamp
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod, atque repellat dolorem! Quia, quidem.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="rounded-3 bg-dark shadow-effect p-4">
+                                    <h4>
+                                        course in Ironhuck Bootcamp
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod, atque repellat dolorem! Quia, quidem.</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="900">
+                                <div class="rounded-3 bg-dark shadow-effect p-4">
+                                    <h4>
+                                        course in Ironhuck Bootcamp
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod, atque repellat dolorem! Quia, quidem.</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                        <h3>experiance</h3>
+                        <div class="row gy-4">
+
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="rounded-3 bg-dark shadow-effect p-4">
+                                    <h4>
+                                        course in Ironhuck Bootcamp
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod, atque repellat dolorem! Quia, quidem.</p>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="rounded-3 bg-dark shadow-effect p-4">
+                                    <h4>
+                                        course in Ironhuck Bootcamp
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod, atque repellat dolorem! Quia, quidem.</p>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="900">
+                                <div class="rounded-3 bg-dark shadow-effect p-4">
+                                    <h4>
+                                        course in Ironhuck Bootcamp
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quod, atque repellat dolorem! Quia, quidem.</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+        <section id="reviews" class="full-hight px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5>reviews</h5>
+                        <h3>What Our Subscribers Say</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="bg-dark p-4 rounded-3 shadow-effect">
+                            <div class="text-warning h4">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos deleniti delectus. Accusantium blanditiis expedita minima voluptatibus, ab eum soluta quasi. Doloremque, commodi, magnam? Nihil ratione, molestias numquam qui dolorem?</p>
+                            <h3>Yaver Gazi</h3>
+                            <p class="text-lead fw-bold link-custam">Twiter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="bg-dark p-4 rounded-3 shadow-effect">
+                            <div class="h4 text-warning">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos deleniti delectus. Accusantium blanditiis expedita minima voluptatibus, ab eum soluta quasi. Doloremque, commodi, magnam? Nihil ratione, molestias numquam qui dolorem?</p>
+                                <h3>Yaver Gazi</h3>
+                                <p class="text-lead fw-bold link-custam">Twiter</p>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="col-4">      
+                <div class="bg-dark p-4 rounded-3 shadow-effect">
+                <div class="h4 text-warning">
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                </div>
+                <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos deleniti delectus. Accusantium blanditiis expedita minima voluptatibus, ab eum soluta quasi. Doloremque, commodi, magnam? Nihil ratione, molestias numquam qui dolorem?</p>
+                <h3>Yaver Gazi</h3>
+              <p class="text-lead fw-bold link-custam">Twiter</p>
+               </div>
+                </div>
+                </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section id="blog" class="full-hight px-lg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-warning">blog</h5>
+                        <h3>My Blog Posts</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="bg-dark p-4 rounded-3 shadow-effect">
+                            <div class="text-warning h4">
+                           
+                            </div>
+                            <div>
+                     
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos deleniti delectus. Accusantium blanditiis expedita minima voluptatibus, ab eum soluta quasi. Doloremque, commodi, magnam? Nihil ratione, molestias numquam qui dolorem?</p>
+                              <p class="text-warning">10.03.2023</p>
+                            <p class="text-lead fw-bold link-custam">Read more</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="bg-dark p-4 rounded-3 shadow-effect">
+                            <div class="h4 text-warning">
+                             
+                            </div>
+                                 <div>
+                         
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos deleniti delectus. Accusantium blanditiis expedita minima voluptatibus, ab eum soluta quasi. Doloremque, commodi, magnam? Nihil ratione, molestias numquam qui dolorem?</p>
+                              <p class="text-warning">10.03.2023</p>
+                            <p class="text-lead fw-bold link-custam">Read more</p>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="col-4">      
+                <div class="bg-dark p-4 rounded-3 shadow-effect">
+                <div class="h4 text-warning">
+               
+                </div>
+                  <div>
+                         
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dignissimos deleniti delectus. Accusantium blanditiis expedita minima voluptatibus, ab eum soluta quasi. Doloremque, commodi, magnam? Nihil ratione, molestias numquam qui dolorem?</p>
+                              <p class="text-warning">10.03.2023</p>
+                            <p class="text-lead fw-bold link-custam">Read more</p>
+                            </div>
+                </div>
+                </div>
+
+                </div>
+
+            </div>
+        </section>
+
+<section id="contact" class="full-hight px-lg-5 ">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <h6 class="text-warning">contact</h6>
+                <h3>Lorem ipsum dolor sit.</h3>
+            </div>
+            <div class="col-lg-8">
+    <form action="#" class="row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="enter your name">
+        </div>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="enter email">
+        </div>
+         <div class="form-group col-md-12 my-2">
+            <input type="text" class="form-control" placeholder="enter subject">
+        </div>
+         <div class="form-group col-md-12 my-2">
+          <textarea name="" id="#"  rows="5" class="form-control" placeholder="enter your massage"></textarea>
+        </div>
+         <div class="form-group col-md-12 my-2">
+            <input type="text" class="btn btn-brand btn-lg" placeholder="enter subject">
+        </div>
+    </form>
+       </div>
+        </div>
+    </div>
+</section>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1b6951a36e.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        AOS.init({
+            offset: 400,
+            duration: 700
+        });
+
+    </script>
+</body>
+
+</html>
